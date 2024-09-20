@@ -10,7 +10,7 @@
 let
   dpanel = fetchGit {
     url = "https://github.com/dogeorg/dpanel.git";
-    rev = "01c2b7c3c6754698388cd0e54ecd590e48b4c232";
+    rev = "e1eaec277970db4be813ca098fcdf0963a2a42ed";
   };
 in
 
