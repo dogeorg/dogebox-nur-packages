@@ -3,11 +3,12 @@
   lib ? pkgs.lib,
   buildGoModule ? pkgs.buildGoModule,
   localDogeboxdPath ? null,
+  localDpanelPath ? null,
   ...
 }:
 
 let
-  dpanel = fetchGit {
+  upstream_dpanel = fetchGit {
     url = "https://github.com/dogeorg/dpanel.git";
     rev = "05b9b3d90a1768cb30e6b8e5e8b9916975344a9d";
   };
@@ -19,7 +20,10 @@ let
 
   dogeboxdVendorHash = "sha256-sCeuZC555CtiZqROfPGPUYsHzejZL5e5ow9IhU60B3I=";
 
-  devPath = builtins.path { path = localDogeboxdPath; };
+  dogeboxDevPath = builtins.path { path = localDogeboxdPath; };
+  dpanelDevPath = builtins.path { path = localDpanelPath; };
+
+  dpanel = if localDpanelPath != null then dpanelDevPath else upstream_dpanel;
 in
 
 buildGoModule {
@@ -29,7 +33,7 @@ buildGoModule {
   src = if localDogeboxdPath != null then
     pkgs.runCommandNoCC "dogeboxd-dev-source" { } ''
       mkdir -p $out
-      cp -rT ${devPath} $out
+      cp -rT ${dogeboxDevPath} $out
     ''
   else
     dogeboxd;

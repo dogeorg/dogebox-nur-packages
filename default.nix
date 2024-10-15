@@ -9,6 +9,7 @@
 {
   pkgs ? import <nixpkgs> { },
   localDogeboxdPath ? null,
+  localDpanelPath ? null
 }:
 
 {
@@ -18,7 +19,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   dkm             = pkgs.callPackage ./pkgs/dkm {};
-  dogeboxd        = pkgs.callPackage ./pkgs/dogeboxd { inherit localDogeboxdPath; };
+  dogeboxd        = pkgs.callPackage ./pkgs/dogeboxd { inherit localDogeboxdPath localDpanelPath; };
   dogecoin-core   = pkgs.callPackage ./pkgs/dogecoin-core {};
   dogemap         = pkgs.callPackage ./pkgs/dogemap {};
   dogenet         = pkgs.callPackage ./pkgs/dogenet {};
