@@ -10,15 +10,15 @@
 let
   upstream_dpanel = fetchGit {
     url = "https://github.com/dogeorg/dpanel.git";
-    rev = "54207dc2495deadfdd170811397b7fe13d97f744";
+    rev = "3ab75acc73b33be1e695018e82e57c85765dd892";
   };
 
   dogeboxd = fetchGit {
     url = "https://github.com/dogeorg/dogeboxd.git";
-    rev = "39cd59a7bda8b39ce4bf9916bf1f7503b0945db1";
+    rev = "a5c243f829d506565fa40c841a7a8f17bf4ae25d";
   };
 
-  dogeboxdVendorHash = "sha256-sCeuZC555CtiZqROfPGPUYsHzejZL5e5ow9IhU60B3I=";
+  dogeboxdVendorHash = "sha256-222OtaJIhQMMFrSxV2363e0WoiIDZKTzIYYWRjPyjGw=";
 
   dogeboxDevPath = builtins.path { path = localDogeboxdPath; };
   dpanelDevPath = builtins.path { path = localDpanelPath; };
