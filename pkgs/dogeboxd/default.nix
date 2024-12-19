@@ -12,7 +12,7 @@
 let
   upstream_dpanel = fetchGit {
     url = "https://github.com/dogeorg/dpanel.git";
-    rev = "cff324dfe45f63d7ea04eb8c30fed73e83719a1f";
+    rev = "f3afa5e971d0996aa94a5e01172e39d359a46521";
   };
 
   dogeboxd = fetchGit {
