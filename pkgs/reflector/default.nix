@@ -17,7 +17,7 @@ buildGoModule {
   vendorHash = "sha256-Dfdzc2wZWis2/Lla6VLYkSUNKw4dTw8kEGCGdDN0org=";
 
   nativeBuildInputs = [
-    pkgs.go_1_21
+    pkgs.go
   ];
 
   meta = with lib; {
