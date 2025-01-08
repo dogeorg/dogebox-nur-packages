@@ -13,12 +13,12 @@ let
 in
 buildGoModule {
   pname = "dogemap-backend";
-  version = "0.3";
+  version = "0.4";
 
   src = pkgs.fetchgit {
     url = "https://github.com/dogeorg/dogemap-backend.git";
-    rev = "v0.1.2";
-    hash = "sha256-ZJJ+i5m9yfgcyYjwelILyhmI8MDnoqSDftjpMe2irq4=";
+    rev = "v0.1.3";
+    hash = "sha256-RW6TPl0YY5TLJz+yKGKrZrRZyxfNgiC0c63pno5b1J4=";
   };
 
   vendorHash = "sha256-98LKOqj84iW/XfHq8ULlLG70WQsBjCR89gnwtW8Lh18=";
