@@ -7,15 +7,15 @@
 
 buildGoModule {
   pname = "identity";
-  version = "0.3";
+  version = "0.4";
 
   src = pkgs.fetchgit {
     url = "https://github.com/dogeorg/identity.git";
-    rev = "v0.1.11";
-    hash = "sha256-FxBbh9U1dKiCmVFpEnsHdMoYVnj7x7j1iZoSaBpwsFk=";
+    rev = "v0.1.12";
+    hash = "sha256-e/tFrX4VmgGL/IxZQdMtr9tI/AfmIyc6Ym80Z2+Qy+E=";
   };
 
-  vendorHash = "sha256-QU7tXH3A/o4RprM2j9etPrIkqetYln/Dc4wbO3Hk0T4=";
+  vendorHash = "sha256-3MS8rxbVPX39v66O3HzW6CupawNKOTcEX0aYzk//ANg=";
 
   nativeBuildInputs = [
     pkgs.go
