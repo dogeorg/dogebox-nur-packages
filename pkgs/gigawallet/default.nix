@@ -8,11 +8,11 @@
 
 buildGoModule {
   pname = "gigawallet";
-  version = "1.0.1";
+  version = "1.0.3";
 
   src = fetchGit {
     url = "https://github.com/dogecoinfoundation/gigawallet.git";
-    ref = "refs/tags/v1.0.1";
+    ref = "refs/tags/v1.0.3";
   };
 
   vendorHash = "sha256-mW5SStSabjWIlLWarI0OfyCTRWRQnEbk2BXabJCJ2h4";
